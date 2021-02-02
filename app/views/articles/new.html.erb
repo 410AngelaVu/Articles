@@ -1,1 +1,7 @@
 <h3>Create a new Article</h3>
+<%= simple_form_for @article do |a| %>
+<%= a.input :title %>
+<%#= a.input :category, collection: @categories %>
+<%= a.input :text %>
+<%= a.submit %>
+<% end %> 
