@@ -1,2 +1,7 @@
+<div class="container">
 <%= @article.title %><br>
-<%= @article.text %>
+<%= @article.text %><br>
+<% @article.categories.each do |f| %><br>
+<%= f.name %>
+<% end %>
+</div>

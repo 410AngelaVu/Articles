@@ -1,7 +1,39 @@
-<h3>Create a new Article</h3>
-<%= simple_form_for @article do |a| %>
-<%= a.input :title %>
-<%#= a.input :category, collection: @categories %>
-<%= a.input :text %>
-<%= a.submit %>
-<% end %> 
+<%= form_with(model: @article, url: articles_path, method: :post) do |f| %>
+  
+    <div class="form-group">
+      <%= f.label :title, class: 'font-weight-bold d-flex' %>
+      <%= f.text_field :title, autofocus: true, autocomplete: "title", class: 'form-control' %>
+    </div> 
+ 
+    <div class="form-group">
+      <%= f.label :text, class: 'font-weight-bold d-flex' %>
+      <%= f.text_area :text, autocomplete: "text", class: 'form-control' %>
+    </div> 
+
+    <%= f.fields_for :articles_categories do |ff| %>
+       <div class="form-group">
+        <%= ff.label :category_id, class: 'font-weight-bold d-flex' %>
+        <%= ff.collection_select(:category_id, Category.all, :id, :name) %>
+      </div> 
+    <% end %>
+
+     
+
+ 
+
+    <div class="form-group">
+      <%= f.label :image, class: 'font-weight-bold d-flex' %>
+      <%= f.file_field :image, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit %>
+    </div>
+    <% end %>
+
+
+
+  
+
+
+

@@ -1,0 +1,6 @@
+<div class="container">
+<% @categories.each do |f| %><br>
+<%= link_to f.name, f %>
+<%= f.priority %>
+<% end %>
+</div>

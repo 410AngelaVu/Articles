@@ -1,25 +1,38 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
+  
 def index
+	@categories = Category.all
 @articles = Article.all.order('created_at DESC')
 end
 
 def new
 @article = Article.new
+@article.articles_categories.build
+#@article.categories.build
+#@categories = Category.all.map { |category| [category.name, category.id] }
+
+
 	end
 
 
 
 def create  
-@article = current_user.created_articles.build(article_params)
+@article = current_user.articles.build(article_params)
 
 if @article.save
 	redirect_to @article
-	 flash[:success] = 'Event was created successfully!'
-else
-	flash[:danger] = "Event wasn't created! Try again!"
-	render 'new'
-end
+    else
+     @categories = Category.all.map { |category| [category.name, category.id] }
+
+     render 'new'
+    end
+#     if @article.save == false       
+# 	@categories = Category.all.map{|c| [ c.name, c.id ] } 
+# 	render 'new'
+# 	else
+# 	redirect_to @article    
+# end
 
 end
 
@@ -33,8 +46,10 @@ end
 
 private
 
+
+
 def article_params
-params.require(:article).permit(:author_id, :image, :title, :text)
+params.require(:article).permit(:author_id, :image, :title, :text, articles_categories_attributes: [:category_id])
 end
 
 end
