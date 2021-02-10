@@ -1,7 +1,13 @@
 <div class="container">
+	<%= image_tag(@article.image) %>
 <%= @article.title %><br>
 <%= @article.text %><br>
 <% @article.categories.each do |f| %><br>
+<p> Category:
 <%= f.name %>
+</p>
 <% end %>
+<p>Written by:
+<%= @article.author.name %>
+</p>
 </div>
