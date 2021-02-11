@@ -39,7 +39,10 @@
 <div class="container-fluid">
   <div class="image-gallery">
     <div class="img-1">
-   <img src="https://cdn5.vectorstock.com/i/1000x1000/05/09/different-types-aircrafts-vector-16950509.jpg" alt="" class="s1">
+   <% Like.popular.each do |s| %>
+    <%= s.article.title %>
+    <%= image_tag(s.article.image) %>
+   <% end %>
  </div>
  <div class="img-2">
    <img src="https://siliconcanals.com/wp-content/uploads/2019/08/airplane-travel-tip.jpg" alt="" class="s1">
@@ -58,27 +61,4 @@
  </div>
   </div>
 </div>
-
-<!-- <div class="lost">
-  <div class="s">
-    <img src="https://cdn5.vectorstock.com/i/1000x1000/05/09/different-types-aircrafts-vector-16950509.jpg" class="img" alt="">
-  </div>
-  <div class="s">
-    <img src="https://siliconcanals.com/wp-content/uploads/2019/08/airplane-travel-tip.jpg" class="img" alt="">
-  </div>
-
-
-    <div class="col">
-      <img src="https://i.pinimg.com/600x315/93/23/fd/9323fda58bc45eead42c1e696089e5d4.jpg" alt="">
-    </div>
-    <div class="col">
-      <img src="https://i.pinimg.com/600x315/93/23/fd/9323fda58bc45eead42c1e696089e5d4.jpg" alt="">
-    </div>
-    <div class="col">
-      <img src="https://i.pinimg.com/600x315/93/23/fd/9323fda58bc45eead42c1e696089e5d4.jpg" alt="">
-    </div>
-    <div class="col">
-      <img src="https://i.pinimg.com/600x315/93/23/fd/9323fda58bc45eead42c1e696089e5d4.jpg" alt="">
-    </div>
-  </div> -->
 

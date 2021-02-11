@@ -1,5 +1,10 @@
 class LikesController < ApplicationController
 
+def index
+@popular = Like.popular
+@like = Like.all
+end
+
 def create
 @like = current_user.likes.new(article_id: params[:article_id])
 if @like.save
