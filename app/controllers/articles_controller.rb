@@ -2,8 +2,21 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   
 def index
-	@categories = Category.all
-@articles = Article.all.order('created_at DESC')
+# 	@categories = Category.all
+# @articles = Article.all.order('created_at DESC')
+# if params[:category_id]
+#   @category = Category.find params[:category_id]
+#   @articles = @category.articles
+# else
+#   @articles = Article.all.order('created_at DESC')
+# end 
+def index 
+ if params[:category_id]
+  @articles = Article.where("category_id = ?", params[:category_id])
+ else
+   @articles = Article.all
+ end 
+end
 end
 
 def new

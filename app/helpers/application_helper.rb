@@ -7,4 +7,6 @@ module ApplicationHelper
       link_to('Like!', article_likes_path(article_id: article.id), method: :post)
     end
   end
+
+
 end

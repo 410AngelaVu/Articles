@@ -40,24 +40,28 @@
   <div class="image-gallery">
     <div class="img-1">
    <% Like.popular.each do |s| %>
-    <%= s.article.title %>
-    <%= image_tag(s.article.image) %>
+    <%= link_to s.article.title, article_path(s.article.id), class:'pop-title' %>
+    <%= image_tag(s.article.image, class:'pop-img') %>
    <% end %>
  </div>
  <div class="img-2">
    <img src="https://siliconcanals.com/wp-content/uploads/2019/08/airplane-travel-tip.jpg" alt="" class="s1">
  </div>
  <div class="img-3">
-   <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2019%2F10%2Fhawaiian-airlines-plane-PLANEPAINT0919.jpg&q=85" alt="" class="s">
+   <%= link_to cat_name, cat_name, class:'top-cat' %>
+   <% Article.where(params[:category_id]).each do |f| %>
+   <%= f.title.last %><br>
+
+  <% end %>
  </div>
  <div class="img-4">
-   <img src="https://img1.grunge.com/img/gallery/the-real-reason-airplanes-are-almost-always-painted-white/intro-1567189774.jpg" alt="" class="s">
+   <%= link_to second_name, second_name, class:'top-cat' %>
 </div>
 <div class="img-5">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/ANA_777-300_Taking_off_from_JFK.jpg/300px-ANA_777-300_Taking_off_from_JFK.jpg" alt="" class="s">
+   <%= link_to third_name, third_name, class:'top-cat' %>
  </div>
  <div class="img-6">
-   <img src="https://www.futuresplatform.com/sites/default/files/styles/article_hero_image/public/2018-04/Future%20of%20Airplanes.jpg?itok=Oj9J2usE" alt="" class="s">
+   <%= link_to fourth_name, fourth_name, class:'top-cat' %>
  </div>
   </div>
 </div>
