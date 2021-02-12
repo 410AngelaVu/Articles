@@ -1,8 +1,9 @@
 class CategoriesController < ApplicationController
 # before_action :set_category
 def index
- @categories = Category.articles.last
- @articles = Article.where(category_id: @category_id)
+ @categories = Category.all
+
+   @articles = Article.all
 
 end
 
