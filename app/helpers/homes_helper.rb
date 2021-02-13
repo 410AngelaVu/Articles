@@ -32,4 +32,6 @@ def fourth_displayed_image
 image_tag(Category.find(15).articles.last.image, class:'arti-img')
 end
 
+
+
 end
