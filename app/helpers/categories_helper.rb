@@ -1,7 +1,7 @@
 module CategoriesHelper
 
 def cat_name
-@first_cat = Category.first.name
+Category.find(12).name
 
 end
 
