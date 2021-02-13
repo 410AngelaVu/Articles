@@ -50,7 +50,7 @@
  <div class="img-3">
    <%= link_to cat_name, cat_name, class:'top-cat' %>
    <p class="p-ti">
-  <%= Category.find(12).articles.last.title  %>
+  <%= first_displayed_category %>
 </p>
    <%= image_tag(Category.find(12).articles.last.image, class:'arti-img') %>
   
@@ -58,20 +58,23 @@
  <div class="img-4">
    <%= link_to second_name, second_name, class:'top-cat' %>
    <p class="p-ti">
-  <%= Category.find(13).articles.last.title %>
+  <%= second_displayed_category %>
 </p>
    <%= image_tag(Category.find(13).articles.last.image, class:'arti-img') %>
 </div>
 <div class="img-5">
    <%= link_to third_name, third_name, class:'top-cat' %>
    <p class="p-ti">
-   <%= Category.find(14).articles.last.title %>
+   <%= third_dipalyed_category %>
  </p>
     <%= image_tag(Category.find(14).articles.last.image, class:'arti-img') %>
  </div>
  <div class="img-6">
    <%= link_to fourth_name, fourth_name, class:'top-cat' %>
-   <%#= Category.find(15).articles.last.title %>
+   <p class="p-ti">
+   <%= fourth_displayed_category %>
+ </p>
+ <%= image_tag(Category.find(15).articles.last.image, class:'arti-img') %>
  </div>
   </div>
 </div>

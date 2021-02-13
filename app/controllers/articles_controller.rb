@@ -5,15 +5,8 @@ class ArticlesController < ApplicationController
 
 
 def index 
-   #@articles = Article.joins(:categories).where("categories.id IN (?)", category_ids)
  @articles = Article.all.order('created_at DESC')
-
-
-      @categories = Category.all
-       
-  
-  #  @article_list = @articles.group_by { |t| t.category.name }
- 
+@categories = Category.all
    end
 
 
