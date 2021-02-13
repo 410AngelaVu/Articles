@@ -14,3 +14,72 @@
  *= require_self
  */
  @import 'bootstrap/scss/bootstrap';
+
+footer {
+	height: 77px;
+	background-color: #4E443F;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+.f-a {
+	flex: 1;
+	font-size: 20px;
+	color: white;
+}
+
+.f-a:hover {
+	color: #FE6001;
+	text-decoration: none;
+}
+
+.dfa {
+	color: #FE6001;
+}
+
+.dfa:hover{
+	color: white;
+	text-decoration: none;
+}
+
+.div-footer {
+	display: flex;
+	// // justify-content: center;
+	// align-items: center;
+	// margin-left: 20%;
+	flex: 2;
+	margin-left: 10%;
+	margin-top: 1%
+}
+
+.footer-icons {
+	display: flex;
+	justify-content:flex-end; 
+	margin-right: 2%;
+	margin-top: 1%;
+}
+
+.fa-twitter,
+.fa-instagram {
+	margin-top: -3%;
+	border-radius: 50%;
+	background-color:  #FE6001;
+	padding-top: 11px;
+	width: 43px;
+    height: 35px;
+    padding-left: 12px;
+}
+
+.fa-facebook-f {
+margin-top: -3%;
+	border-radius: 50%;
+	background-color:  #FE6001;
+	padding-top: 11px;
+	width: 43px;
+    height: 35px;
+    padding-left: 15px;
+}
