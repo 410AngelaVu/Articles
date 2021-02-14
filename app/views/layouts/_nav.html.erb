@@ -6,28 +6,20 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto la">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <%= link_to 'Home', root_path, class:'nav-link' %>  
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
-        	<%= cat_name %>
-        </a>
-      </li>
+      <%= link_to cat_name, category_path(12), class:'nav-link' %>
+        </li>
 		<li class="nav-item">
-        <a class="nav-link" href="#">
-        	<%= second_name %>
-        </a>
+        	<%= link_to second_name, category_path(13), class:'nav-link' %>
       </li>
            <li class="nav-item">
-        <a class="nav-link" href="#">
-        	<%= third_name %>
-        </a>
+        	<%= link_to third_name, category_path(14), class:'nav-link' %>
       </li>
         </li>
            <li class="nav-item">
-        <a class="nav-link" href="#">
-        	<%= fourth_name %>
-        </a>
+        	<%= link_to fourth_name, category_path(15), class:'nav-link' %>
       </li>
 
     </ul>

@@ -1,3 +1,6 @@
 <div class="container">
-<%= @category.name %>
+<%#= Article.all.select{|item| (Category.find(12,13,14,15)-item.categories).blank?} %>
+<%  Category.find(@category.id).articles.each do |f| %>
+<%= f.title %>
+<% end %>
 </div>
