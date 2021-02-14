@@ -1,6 +1,14 @@
 <div class="container">
-<%#= Article.all.select{|item| (Category.find(12,13,14,15)-item.categories).blank?} %>
-<%  Category.find(@category.id).articles.each do |f| %>
-<%= f.title %>
+<%  Category.find(@category.id).articles.each do |f| %><br>
+<% f.categories.each do |m| %>
+<h4 class="category-name">
+<%= m.name %><br>
+</h4>
+<% end %>
+<h5 class="category-name-1"><br>
+<%= link_to f.title, f, class:'text-dark' %>
+</h5>
+<%= image_tag(f.image, class:'img-category') %><br><br>
 <% end %>
 </div>
+<%= render 'homes/footer' %>
