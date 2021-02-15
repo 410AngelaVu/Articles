@@ -1,7 +1,11 @@
 <div class="container">
-	<%= image_tag(@article.image) %>
+	<%= image_tag(@article.image, class:'art-img') %><br><br>
+	<h4 class="art-la">
 <%= @article.title %><br>
+</h4>
+<p class="text-left">
 <%= @article.text %><br>
+</p>
 <% @article.categories.each do |f| %><br>
 <p> Category:
 <%= f.name %>

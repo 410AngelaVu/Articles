@@ -8,6 +8,9 @@
 <h5 class="category-name-1"><br>
 <%= link_to f.title, f, class:'text-dark' %>
 </h5>
+<p class="cat-p">
+	<%= truncate(f.text, length: 5) %>
+</p>
 <%= image_tag(f.image, class:'img-category') %><br><br>
 <% end %>
 </div>
