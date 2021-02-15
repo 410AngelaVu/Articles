@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 def index
  @categories = Category.all
 
-   @articles = Article.all
+   @articles = Article.all.order('created_at DESC')
 
 end
 
