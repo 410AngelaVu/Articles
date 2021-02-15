@@ -14,6 +14,7 @@
 <%= like_or_dislike_btn(@article) %>
 <p> <%= @article.likes.count %> likes 
 </p>
+<p>Views: <%= @article.hits %></p>
 <p>Written by:
 <%= @article.author.name %>
 </p>

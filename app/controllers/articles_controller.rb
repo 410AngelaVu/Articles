@@ -36,6 +36,8 @@ end
 
 def show
 @article = Article.find(params[:id])
+ @article.punch(request)
+
 end
 
 
@@ -44,7 +46,7 @@ private
 
 
 def article_params
-params.require(:article).permit(:author_id, :image, :title, :text, articles_categories_attributes: [:category_id])
+params.require(:article).permit(:author_id, :image, :views, :title, :text, articles_categories_attributes: [:category_id])
 end
 
 end
