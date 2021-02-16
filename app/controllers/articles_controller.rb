@@ -1,52 +1,38 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
-  
 
+  def index
+    @articles = Article.all.order('created_at DESC')
+    @categories = Category.all
+  end
 
+  def new
+    @article = Article.new
+    @article.articles_categories.build
+    @categories = Category.all.map { |category| [category.name, category.id] }
+  end
 
-def index 
- @articles = Article.all.order('created_at DESC')
-@categories = Category.all
+  def create
+    @article = current_user.articles.build(article_params)
 
-   end
-
-
-def new
-@article = Article.new
-@article.articles_categories.build
-@categories = Category.all.map { |category| [category.name, category.id] }
-
-
-	end
-
-
-
-def create  
-@article = current_user.articles.build(article_params)
-
-if @article.save
-	redirect_to @article
+    if @article.save
+      redirect_to @article
     else
-     @categories = Category.all.map { |category| [category.name, category.id] }
+      @categories = Category.all.map { |category| [category.name, category.id] }
 
-     render 'new'
+      render 'new'
     end
+  end
 
-end
+  def show
+    @article = Article.find(params[:id])
+    @article.punch(request)
+  end
 
-def show
-@article = Article.find(params[:id])
- @article.punch(request)
+  private
 
-end
-
-
-private
-
-
-
-def article_params
-params.require(:article).permit(:author_id, :image, :views, :title, :text, articles_categories_attributes: [:category_id])
-end
-
+  def article_params
+    params.require(:article).permit(:author_id, :image, :views, :title, :text,
+                                    articles_categories_attributes: [:category_id])
+  end
 end

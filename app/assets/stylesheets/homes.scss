@@ -94,7 +94,12 @@ height:100%;
 	bottom: 6%;
 	color: #EB5A00;
 	font-size: 30px;
-	white-space: nowrap;
+	 white-space: nowrap;
+	 font-weight: bold;
+}
+
+.pop-title:hover {
+	color:white;
 }
 
 .top-cat {
@@ -105,6 +110,11 @@ height:100%;
   text-decoration-color: #FAFA07;
   text-decoration-thickness: 5px;
   font-weight: bold;
+  color: white;
+}
+
+.top-cat:hover {
+	color: #EB5A00;
 }
 
 .arti-img {
@@ -118,8 +128,12 @@ height:100%;
 	position: absolute;
 	color: white;
 	font-weight: bold;
-	font-size: 23px;
+	font-size: 20px;
 	bottom: 11px;
-    left: 5%;
+    left: 3%;
     white-space: nowrap;
+}
+
+.p-ti:hover {
+	color: #EB5A00;
 }
