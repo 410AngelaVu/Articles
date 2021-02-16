@@ -1,34 +1,34 @@
 module HomesHelper
   def first_displayed_category
-    link_to(Category.find(12).articles.last.title, Category.find(12).articles.last, class: 'p-ti')
+    link_to(Category.find(1).articles.last.title, Category.find(1).articles.last, class: 'p-ti')
   end
 
   def second_displayed_category
-    link_to(Category.find(13).articles.last.title, Category.find(13).articles.last, class: 'p-ti')
+    link_to(Category.find(2).articles.last.title, Category.find(2).articles.last, class: 'p-ti')
   end
 
   def third_dipalyed_category
-    link_to(Category.find(14).articles.last.title, Category.find(14).articles.last, class: 'p-ti')
+    link_to(Category.find(3).articles.last.title, Category.find(3).articles.last, class: 'p-ti')
   end
 
   def fourth_displayed_category
-    link_to(Category.find(15).articles.last.title, Category.find(15).articles.last, class: 'p-ti')
+    link_to(Category.find(4).articles.last.title, Category.find(4).articles.last, class: 'p-ti')
   end
 
   def first_displayed_image
-    image_tag(Category.find(12).articles.last.image, class: 'arti-img')
+    image_tag(Category.find(1).articles.last.image, class: 'arti-img')
   end
 
   def second_displayed_image
-    image_tag(Category.find(13).articles.last.image, class: 'arti-img')
+    image_tag(Category.find(2).articles.last.image, class: 'arti-img')
   end
 
   def third_displayed_image
-    image_tag(Category.find(14).articles.last.image, class: 'arti-img')
+    image_tag(Category.find(3).articles.last.image, class: 'arti-img')
   end
 
   def fourth_displayed_image
-    image_tag(Category.find(15).articles.last.image, class: 'arti-img')
+    image_tag(Category.find(4).articles.last.image, class: 'arti-img')
   end
 
   def vote(l_popular)
