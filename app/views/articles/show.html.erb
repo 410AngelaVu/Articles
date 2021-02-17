@@ -1,5 +1,5 @@
 <div class="container">
-	<%= image_tag(@article.image, class:'art-img') %><br><br>
+	<%= image_tag(@article.image, class:'art-img') unless @article.image.nil? %><br><br>
 	<h4 class="art-la">
 <%= @article.title %><br>
 </h4>

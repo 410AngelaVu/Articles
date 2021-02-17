@@ -11,7 +11,7 @@
 <p class="cat-p">
 	<%= truncate(f.text, length: 250) %>
 </p>
-<%= image_tag(f.image, class:'img-category') %><br><br>
+<%= image_tag(f.image, class:'img-category') unless f.image.blank? %><br><br>
 <% end %>
 </div>
 <%= render 'homes/footer' %>
