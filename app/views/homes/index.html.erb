@@ -1,9 +1,11 @@
 <div class="container-fluid">
   <div class="image-gallery">
     <div class="img-1">
-   <%#= vote(Like.popular.first.article) %>
+   <%= vote(Like.popular.first.article) %>
    </div>
  <div class="img-2">
+  <p class="space text-white"><i>Add your space here</i></p>
+  <img src="https://i.pinimg.com/originals/63/8e/1b/638e1b6e7208069bfc7c1441e4155755.jpg" alt="" class="arti-img">
  </div>
  <div class="img-3">
    <%= link_to cat_name, cat_name, class:'top-cat' unless cat_name.blank? %>
