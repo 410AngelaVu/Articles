@@ -15,7 +15,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
     'img-1 img-1 img-1 img-2'
     'img-3 img-4 img-5 img-6';
   border: 1px solid black;
@@ -81,8 +81,8 @@
 }
 
 .container-fluid {
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .pop-title {
