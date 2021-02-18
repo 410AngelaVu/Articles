@@ -1,5 +1,6 @@
 <div class="container">
-<%  Category.find(@category.id).articles.each do |f| %><br>
+<% Category.find(@category.id).articles.each do |f| %><br>
+
 <% f.categories.each do |m| %>
 <h4 class="category-name">
 <%= m.name %><br>
@@ -11,7 +12,7 @@
 <p class="cat-p">
 	<%= truncate(f.text, length: 250) %>
 </p>
-<%= image_tag(f.image, class:'img-category') unless f.image.blank? %><br><br>
+<%= image_tag(f.image, class:'img-category') unless f.image.blank? %><br>
 <% end %>
-</div>
+</div><br>
 <%= render 'homes/footer' %>

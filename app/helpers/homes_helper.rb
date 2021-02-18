@@ -1,6 +1,6 @@
 module HomesHelper
   def first_displayed_category
-    link_to(Category.find(1).articles.last.title, Category.find(1).articles.last, class: 'p-ti')
+    link_to(Category.find(1).articles.last.title, Category.find(1).articles.last, class: 'p-ti') 
   end
 
   def second_displayed_category
