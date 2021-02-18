@@ -13,76 +13,76 @@
  *= require_tree .
  *= require_self
  */
- @import 'bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/bootstrap';
 
 footer {
-	height: 77px;
-	background-color: #4E443F;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  height: 77px;
+  background-color: #4e443f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .f-a {
-	flex: 1;
-	font-size: 20px;
-	color: white;
+  flex: 1;
+  font-size: 20px;
+  color: white;
 }
 
 .f-a:hover {
-	color: #FE6001;
-	text-decoration: none;
+  color: #fe6001;
+  text-decoration: none;
 }
 
 .dfa {
-	color: #FE6001;
+  color: #fe6001;
 }
 
 .dfa:hover{
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .div-footer {
-	display: flex;
-	flex: 2;
-	margin-left: 10%;
-	margin-top: 1%
+  display: flex;
+  flex: 2;
+  margin-left: 10%;
+  margin-top: 1%;
 }
 
 .footer-icons {
-	display: flex;
-	justify-content:flex-end; 
-	margin-right: 2%;
-	margin-top: 1%;
+  display: flex;
+  justify-content: flex-end; 
+  margin-right: 2%;
+  margin-top: 1%;
 }
 
 .fa-twitter,
 .fa-instagram {
-	margin-top: -3%;
-	border-radius: 50%;
-	background-color:  #FE6001;
-	padding-top: 11px;
-	width: 43px;
-    height: 35px;
-    padding-left: 12px;
+  margin-top: -3%;
+  border-radius: 50%;
+  background-color: #fe6001;
+  padding-top: 11px;
+  width: 43px;
+  height: 35px;
+  padding-left: 12px;
 }
 
 .fa-facebook-f {
-margin-top: -3%;
-	border-radius: 50%;
-	background-color:  #FE6001;
-	padding-top: 11px;
-	width: 43px;
-    height: 35px;
-    padding-left: 15px;
+  margin-top: -3%;
+  border-radius: 50%;
+  background-color: #fe6001;
+  padding-top: 11px;
+  width: 43px;
+  height: 35px;
+  padding-left: 15px;
 }
 
 .signup-form {
-	width: 25% !important;
-	margin-left: 40%;
+  width: 25% !important;
+  margin-left: 40%;
 }
 
 .sign-up-h2 {
-margin-left: 40%;	
+  margin-left: 40%;	
 }
