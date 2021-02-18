@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# User.create(email:"katja@gmail.com",name:"Katja", username:'Katja', password:"123456", password_confirmation:'123456')
+ User.create(email:"katja@gmail.com",name:"Katja", username:'Katja', password:"123456", password_confirmation:'123456')
 
 Category.create(name:"Airbus A340-600", priority:1)
 Category.create(name:"Airbus A380-800", priority:2)
@@ -30,7 +30,7 @@ Article.create(author_id: 1, title: 'Boeing’s Advanced Manufacturing Improves 
 	“We can build any portion of the forward or aft section in any of our six main production positions.
 	” Mechanics are able to move the robots and massive parts around on automated guided vehicles or AGVs. 
 	That mobility and flexibility will allow FAUB to manufacture all 777 models including the upcoming 777X, said Ben Nimmergut, 
-	777 production engineering chief engineer.').image.attach(io: File.open('storage/ip/97/ip97gfxv524wyb0716qbve6oierk'), filename: 'A2_fig1.gif')
+	777 production engineering chief engineer.').image.attach(io: File.open('storage/8d/6m/8d6moq1htxvnqzwz9uvxclhjzt85'), filename:'8d6moq1htxvnqzwz9uvxclhjzt85')
 Article.create(author_id: 1, title:'Singapore Airlines Commitment to purchase 20 777-3', text:'Singapore Airlines has announced its 
 	commitment to purchase 20 777-9s and 19 787-10 Dreamliners. The national carrier and 787-10 launch customer also announced its 
 	recommitment for its previous order for 30 787-10 airplanes. When finalized, the order will be posted on the Boeing Orders and 
