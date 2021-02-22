@@ -2,28 +2,59 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .img-category {
-  width: 633px;
+  width: 475px;
   height: 596px;
-  margin-left: -35%;
-  margin-top: -14%;
 }
 
 .category-name {
   text-decoration: underline;
-  margin-left: 27%;
+  margin-left: 5%;
   color: #f9a827;
+  margin-top: 10px;
 }
 
 .category-name-1 {
   font-weight: bold;
-  margin-left: 27%;
+  margin-left: 5%;
   color: #000;
 }
 
 .cat-p {
-  margin-left: 27%;
+  margin-left: 5%;
 }
 
-.test {
-  border: 25px solid black;
+.best {
+  display: inline-flex;
+}
+
+.best > .pictunare {
+  width: 475px;
+  height: 596px;
+  order: 1;
+  border: 1px solid black;
+}
+
+.best > .information {
+  width: 475px;
+  height: 596px;
+  order: 2;
+  border: 1px solid black;
+}
+
+.disp_img_second {
+  display: inline-flex;
+}
+
+.disp_img_second > .pictunare {
+  width: 475px;
+  height: 596px;
+  order: 2;
+  border: 1px solid black;
+}
+
+.disp_img_second > .information {
+  width: 475px;
+  height: 596px;
+  order: 1;
+  border: 1px solid black;
 }

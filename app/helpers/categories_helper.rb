@@ -15,11 +15,10 @@ module CategoriesHelper
     Category.fourth.name
   end
 
-  def categories_articles(category)
+  def categories_articles_1(category)
     counter = 0
-   category.articles.each.with_index do |f, index|
+   category.articles.collect.with_index do |f, index| 
     counter += 1
-
     concat render partial: 'categories/art', locals: { index: index, f: f, image_first: (counter == 3) || (counter == 4) ? true : false}
     counter = counter == 4 ? 0 : counter
    end 

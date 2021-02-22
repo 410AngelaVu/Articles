@@ -18,7 +18,7 @@
 <p>Written by:
 <%= @article.author.name %>
 </p>
-<div class="text-center mt-4"><%= link_to '<< Next Articles >>', article_path(@article.id + 1) %></div>
+<div class="text-center mt-4"><%= link_to 'Next Article >>', article_path(@article.id + 1) %></div>
   <div class="text-center mt-1"><%= link_to '< Back to previous page',  article_path(@article.id - 1) %></div>
 </div><br>
 <%= render 'homes/footer' %>
