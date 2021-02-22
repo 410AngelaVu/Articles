@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
-  
 
   def index
     @page = params.fetch(:page, 0).to_i
@@ -17,7 +16,7 @@ class ArticlesController < ApplicationController
     @article = current_user.articles.build(article_params)
 
     if @article.save
-       flash[:notice] = 'The article was created succesfully.'
+      flash[:notice] = 'The article was created succesfully.'
       redirect_to @article
     else
       @categories = Category.all.map { |category| [category.name, category.id] }

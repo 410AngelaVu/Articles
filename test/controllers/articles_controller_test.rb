@@ -13,5 +13,4 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   #   get articles_path
   #   assert_response :success
   # end
-
 end

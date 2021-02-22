@@ -22,7 +22,10 @@ module HomesHelper
   end
 
   def second_displayed_image
-    image_tag(Category.second.articles.last&.image, class: 'arti-img') if Category.second.articles.last&.image&.attached?
+    return unless Category.second.articles.last&.image&.attached?
+
+    image_tag(Category.second.articles.last&.image,
+              class: 'arti-img')
   end
 
   def third_displayed_image
@@ -30,7 +33,10 @@ module HomesHelper
   end
 
   def fourth_displayed_image
-    image_tag(Category.fourth.articles.last&.image, class: 'arti-img') if Category.fourth.articles.last&.image&.attached?
+    return unless Category.fourth.articles.last&.image&.attached?
+
+    image_tag(Category.fourth.articles.last&.image,
+              class: 'arti-img')
   end
 
   def vote(l_popular)

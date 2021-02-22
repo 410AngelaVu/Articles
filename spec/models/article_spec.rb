@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-  current_user = User.first_or_create!(email: 'katja@example.com', name: 'katja', username:'katja', password: 'password',
+  # rubocop:disable Layout/LineLength
+  current_user = User.first_or_create!(email: 'katja@example.com', name: 'katja', username: 'katja', password: 'password',
                                        password_confirmation: 'password')
+  # rubocop:enable Layout/LineLength
 
   it 'has a title' do
     article = Article.new(
