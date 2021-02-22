@@ -1,18 +1,4 @@
 <div class="container">
-<% Category.find(@category.id).articles.each do |f| %><br>
-
-<% f.categories.each do |m| %>
-<h4 class="category-name">
-<%= m.name %><br>
-</h4>
-<% end %>
-<h5 class="category-name-1"><br>
-<%= link_to f.title, f, class:'text-dark' %>
-</h5>
-<p class="cat-p">
-	<%= truncate(f.text, length: 250) %>
-</p>
-<%= image_tag(f.image, class:'img-category') unless f.image.blank? %><br>
-<% end %>
+<%= categories_articles(@category) %>
 </div><br>
 <%= render 'homes/footer' %>

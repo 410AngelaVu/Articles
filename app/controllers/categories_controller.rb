@@ -1,9 +1,9 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
+ 
   def index
     @categories = Category.all
-
-    @articles = Article.all.order('created_at DESC')
+     @articles = Article.all.order('created_at DESC')
   end
 
   def show

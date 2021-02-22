@@ -1,0 +1,12 @@
+<div class=" <%= image_first ? 'test' : '' %>">
+		<h4 class="category-name">
+		<%= @category.name %><br>
+		</h4>
+		<h5 class="category-name-1"><br>
+		<%= link_to f.title, f, class:'text-dark' %>
+		</h5>
+		<p class="cat-p">
+			<%= truncate(f.text, length: 250) %>
+		</p>
+		<%= image_tag(f.image, class:'img-category') unless f.image.blank? %><br>
+	</div>

@@ -7,4 +7,12 @@ module ApplicationHelper
       link_to('Like!', article_likes_path(article_id: article.id), method: :post)
     end
   end
+  def display_flash_messages
+    # rubocop:disable Style/GuardClause
+    unless flash[:notice].nil?
+      concat content_tag(:p, notice,
+                         class: 'alert alert-warning alert-dismissible fade show')
+    end
+    # rubocop:enable Style/GuardClause
+end
 end

@@ -1,17 +1,27 @@
 module CategoriesHelper
   def cat_name
-    Category.find(1).name
+    Category.first.name
   end
 
   def second_name
-    Category.find(2).name
+    Category.second.name
   end
 
   def third_name
-    Category.find(3).name
+    Category.third.name
   end
 
   def fourth_name
-    Category.find(4).name
+    Category.fourth.name
+  end
+
+  def categories_articles(category)
+    counter = 0
+   category.articles.each.with_index do |f, index|
+    counter += 1
+
+    concat render partial: 'categories/art', locals: { index: index, f: f, image_first: (counter == 3) || (counter == 4) ? true : false}
+    counter = counter == 4 ? 0 : counter
+   end 
   end
 end

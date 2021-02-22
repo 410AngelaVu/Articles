@@ -11,8 +11,10 @@
     <script src="https://kit.fontawesome.com/c7d73dbfbb.js" crossorigin="anonymous"></script>
   </head>
 <body>
+  <% if user_signed_in? %>
     <%= render 'layouts/nav' %>
-
+     <% display_flash_messages %>
+<% end %>
    
     <%= yield %>
   
