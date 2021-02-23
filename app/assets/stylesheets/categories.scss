@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .img-category {
-  width: 475px;
+  width: 100%;
   height: 596px;
 }
 
@@ -25,17 +25,18 @@
 
 .best {
   display: inline-flex;
+  width: 50%;
 }
 
 .best > .pictunare {
-  width: 475px;
+  width: 100%;
   height: 596px;
   order: 1;
   border: 1px solid black;
 }
 
 .best > .information {
-  width: 475px;
+  width: 100%;
   height: 596px;
   order: 2;
   border: 1px solid black;
@@ -43,17 +44,18 @@
 
 .disp_img_second {
   display: inline-flex;
+  width: 50%;
 }
 
 .disp_img_second > .pictunare {
-  width: 475px;
+  width: 100%;
   height: 596px;
   order: 2;
   border: 1px solid black;
 }
 
 .disp_img_second > .information {
-  width: 475px;
+  width: 100%;
   height: 596px;
   order: 1;
   border: 1px solid black;

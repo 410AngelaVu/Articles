@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.includes(:articles).find(params[:id])
+    @category = Category.art_include.find(params[:id])
     @articles = Article.all.order('created_at DESC')
   end
 

@@ -6,11 +6,7 @@
 <p class="text-left">
 <%= @article.text %><br>
 </p>
-<% @article.categories.each do |f| %><br>
-<p> Category:
-<%= f.name %>
-</p>
-<% end %>
+<% show_article_category(@article) %>
 <%= like_or_dislike_btn(@article) %>
 <p> <%= @article.likes.count %> likes 
 </p>
