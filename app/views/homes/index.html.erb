@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="image-gallery">
     <div class="img-1">
-   <%= vote(Like.popular.first&.article) unless Like.popular.first&.article.blank? %>
+   <%= vote(Like.popular.first&.article) unless Like.popular.first&.article.present? %>
    </div>
  <div class="img-2">
   <p class="space text-white"><i>Add your space here</i></p>
@@ -12,28 +12,28 @@
    <p class="p-ti">
   <%=  first_displayed_category unless first_displayed_category.blank? %>
   </p>
-   <%= first_displayed_image unless first_displayed_image.blank? %>
+   <%= first_displayed_image unless first_displayed_image.present? %>
   </div>
  <div class="img-4">
    <%= link_to second_name, second_name, class:'top-cat' unless second_name.blank? %>
    <p class="p-ti">
   <%= second_displayed_category unless second_displayed_category.blank? %>
 </p>
-   <%= second_displayed_image unless second_displayed_image.blank? %>
+   <%= second_displayed_image unless second_displayed_image.present? %>
 </div>
 <div class="img-5">
    <%= link_to third_name, third_name, class:'top-cat' unless third_name.blank? %>
    <p class="p-ti">
    <%= third_dipalyed_category unless third_dipalyed_category.blank? %>
  </p>
-    <%= third_displayed_image unless third_displayed_image.blank? %>
+    <%= third_displayed_image unless third_displayed_image.present? %>
  </div>
  <div class="img-6">
    <%= link_to fourth_name, fourth_name, class:'top-cat' unless fourth_name.blank? %>
    <p class="p-ti">
    <%= fourth_displayed_category unless fourth_displayed_category.blank? %>
  </p>
- <%= fourth_displayed_image unless fourth_displayed_image.blank? %>
+ <%= fourth_displayed_image unless fourth_displayed_image.present? %>
  </div>
   </div>
 </div>

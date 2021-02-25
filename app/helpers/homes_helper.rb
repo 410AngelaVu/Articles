@@ -16,31 +16,31 @@ module HomesHelper
   end
 
   def first_displayed_image
-    return unless Category.first.articles.last&.image&.attached?
+    return unless Category.first.articles.last&.image&.present?
 
     image_tag(Category.first.articles.last&.image, class: 'arti-img')
   end
 
   def second_displayed_image
-    return unless Category.second.articles.last&.image&.attached?
+    return unless Category.second.articles.last&.image&.present?
 
     image_tag(Category.second.articles.last&.image,
               class: 'arti-img')
   end
 
   def third_displayed_image
-    image_tag(Category.third.articles.last&.image, class: 'arti-img') if Category.third.articles.last&.image&.attached?
+    image_tag(Category.third.articles.last&.image, class: 'arti-img') if Category.third.articles.last&.image&.present?
   end
 
   def fourth_displayed_image
-    return unless Category.fourth.articles.last&.image&.attached?
+    return unless Category.fourth.articles.last&.image&.present?
 
     image_tag(Category.fourth.articles.last&.image,
               class: 'arti-img')
   end
 
   def vote(l_popular)
-    return unless l_popular.image&.attached?
+    return unless l_popular.image&.present?
 
     content_tag(:p, link_to(l_popular.title, l_popular, class: 'pop-title')) +
       image_tag(l_popular.image, class: 'pop-img')
