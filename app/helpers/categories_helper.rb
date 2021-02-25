@@ -1,18 +1,18 @@
 module CategoriesHelper
   def cat_name
-    Category.first.name
+    Category.first.name unless Category.first.name.blank? 
   end
 
   def second_name
-    Category.second.name
+    Category.second.name unless Category.second.name.blank?
   end
 
   def third_name
-    Category.third.name
+    Category.third.name unless Category.third.name.blank?
   end
 
   def fourth_name
-    Category.fourth.name
+    Category.fourth.name unless Category.fourth.name.blank?
   end
 
   def categories_articles_one(category)
