@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #  User.create(email:"katja@gmail.com",name:"Katja", username:'Katja', password:"123456", password_confirmation:'123456')
 
-# Category.create(name:"Airbus A340-600", priority:1)
-# Category.create(name:"Airbus A380-800", priority:2)
-# Category.create(name:"Boeing 777-300", priority:3)
-# Category.create(name:"Rotorcraft", priority:4)
+Category.create(name:"Airbus A340-600", priority:1)
+Category.create(name:"Airbus A380-800", priority:2)
+Category.create(name:"Boeing 777-300", priority:3)
+Category.create(name:"Rotorcraft", priority:4)
 
 #   article_one = Article.create(author_id: 1, title: '1-Boeing’s Advanced Manufacturing Improves 777 Assembly', text:'Mechanic Mike Jennings has 
 # 	two new words in his job title – robot operator. He helps oversee one of the robots used in the new Fuselage Automated Upright Build, 
