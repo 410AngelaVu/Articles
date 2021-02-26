@@ -1,6 +1,6 @@
 module CategoriesHelper
   def cat_name
-    Category.first&.name unless Category.first.blank? 
+    Category.first&.name unless Category.first.blank?
   end
 
   def second_name
