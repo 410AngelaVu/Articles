@@ -27,6 +27,8 @@ module HomesHelper
               class: 'arti-img')
   end
 
+  # rubocop:enable Metrics/CyclomaticComplexity
+  # rubocop:disable Metrics/CyclomaticComplexity
   def second_displayed_image
     return if Category.second&.articles&.last&.image.blank?
 
@@ -34,6 +36,8 @@ module HomesHelper
               class: 'arti-img')
   end
 
+  # rubocop:enable Metrics/CyclomaticComplexity
+  # rubocop:disable Metrics/CyclomaticComplexity
   def third_displayed_image
     return if Category.third&.articles&.last&.image.blank?
 
@@ -41,6 +45,8 @@ module HomesHelper
               class: 'arti-img')
   end
 
+  # rubocop:enable Metrics/CyclomaticComplexity
+  # rubocop:disable Metrics/CyclomaticComplexity
   def fourth_displayed_image
     return if Category.fourth&.articles&.last&.image.blank?
 
