@@ -21,7 +21,6 @@
 ###### Then type `cd Articles` and that will get you inside the project.
 ###### Then run bundle install
 ###### Run db:migrate
-###### un db:seed
 ###### Sign Up
 ###### To open in server, go to the browser and type localhost:3000
 

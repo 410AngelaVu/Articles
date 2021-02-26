@@ -47,10 +47,10 @@ module HomesHelper
     image_tag(Category.fourth&.articles&.last&.image,
               class: 'arti-img')
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 
   def vote(l_popular)
     content_tag(:p, link_to(l_popular.title, l_popular, class: 'pop-title')) +
       image_tag(l_popular.image, class: 'pop-img')
   end
 end
-# rubocop:enable Metrics/CyclomaticComplexity
