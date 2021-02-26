@@ -21,22 +21,22 @@ module HomesHelper
 
   def first_displayed_image
     image_tag(Category.first&.articles&.last&.image,
-              class: 'arti-img')
+              class: 'arti-img') if Category.first&.articles&.last&.image.present?
   end
 
   def second_displayed_image
     image_tag(Category.second&.articles&.last&.image,
-              class: 'arti-img')
+              class: 'arti-img') if Category.second&.articles&.last&.image.present?
   end
 
   def third_displayed_image
     image_tag(Category.third&.articles&.last&.image,
-              class: 'arti-img')
+              class: 'arti-img') if Category.third&.articles&.last&.image.present?
   end
 
   def fourth_displayed_image
     image_tag(Category.fourth&.articles&.last&.image,
-              class: 'arti-img')
+              class: 'arti-img') if Category.fourth&.articles&.last&.image.present?
   end
 
   def vote(l_popular)
