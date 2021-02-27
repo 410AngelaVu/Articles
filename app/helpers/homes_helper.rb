@@ -19,7 +19,7 @@ module HomesHelper
             class: 'p-ti')
   end
 
-  # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
+  # rubocop:disable all
   def first_displayed_image
     return if Category.first&.articles&.last&.image.blank?
 
@@ -27,7 +27,8 @@ module HomesHelper
               class: 'arti-img')
   end
 
-  
+  # rubocop:enable
+   # rubocop:disable all
   def second_displayed_image
     return if Category.second&.articles&.last&.image.blank?
 
@@ -35,6 +36,8 @@ module HomesHelper
               class: 'arti-img')
   end
 
+  # rubocop:enable
+   # rubocop:disable all
   def third_displayed_image
     return if Category.third&.articles&.last&.image.blank?
 
@@ -42,15 +45,16 @@ module HomesHelper
               class: 'arti-img')
   end
 
-
+  # rubocop:enable
+   # rubocop:disable all
   def fourth_displayed_image
     return if Category.fourth&.articles&.last&.image.blank?
 
     image_tag(Category.fourth&.articles&.last&.image,
               class: 'arti-img')
   end
-  
 
+  # rubocop:enable
   def vote(l_popular)
     content_tag(:p, link_to(l_popular.title, l_popular, class: 'pop-title')) +
       image_tag(l_popular.image, class: 'pop-img')
