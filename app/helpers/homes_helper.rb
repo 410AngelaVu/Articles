@@ -21,27 +21,27 @@ module HomesHelper
 
   # rubocop:disable all
   def first_displayed_image
-    return if Category.first&.articles&.last&.image.blank?
+    return if Category.first&.articles&.last&.image_url.blank?
 
-    image_tag(Category.first&.articles&.last&.image,
+    image_tag(Category.first&.articles&.last&.image_url,
               class: 'arti-img')
   end
 
   # rubocop:enable
    # rubocop:disable all
   def second_displayed_image
-    return if Category.second&.articles&.last&.image.blank?
+    return if Category.second&.articles&.last&.image_url.blank?
 
-    image_tag(Category.second&.articles&.last&.image,
+    image_tag(Category.second&.articles&.last&.image_url,
               class: 'arti-img')
   end
 
   # rubocop:enable
    # rubocop:disable all
   def third_displayed_image
-    return if Category.third&.articles&.last&.image.blank?
+    return if Category.third&.articles&.last&.image_url.blank?
 
-    image_tag(Category.third&.articles&.last&.image,
+    image_tag(Category.third&.articles&.last&.image_url,
               class: 'arti-img')
   end
 
