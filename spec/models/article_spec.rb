@@ -51,10 +51,6 @@ RSpec.describe Article, type: :model do
   end
 
   describe 'associations' do
-    it { should have_one_attached(:image) }
-  end
-
-  describe 'associations' do
     it { should accept_nested_attributes_for(:articles_categories) }
   end
   describe 'associations' do

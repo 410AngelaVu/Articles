@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-	include ImageUploader::Attachment(:image)
+  include ImageUploader::Attachment(:image)
   belongs_to :author, foreign_key: 'author_id', class_name: 'User'
   has_many :articles_categories
   has_and_belongs_to_many :categories, through: :articles_categories

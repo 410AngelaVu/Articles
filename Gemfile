@@ -27,8 +27,8 @@ gem 'simple_form', '~> 5.0', '>= 5.0.3' # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'punching_bag', '~> 0.7.0'
 
-gem 'shrine-cloudinary', '~> 1.1', '>= 1.1.1'
 gem 'shrine', '~> 3.3'
+gem 'shrine-cloudinary', '~> 1.1', '>= 1.1.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -37,8 +37,8 @@ gem 'rubocop', '~> 1.10', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
   gem 'rspec-rails', '~> 4.0.2'
-   gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 end
 
 group :development do
