@@ -1,0 +1,18 @@
+<div class="container"><br>
+	<%= image_tag(@article.image_url, class:'art-img') if @article.image_url %><br><br>
+	<h4 class="art-la">
+<%= @article.title %><br>
+</h4>
+<p class="text-left">
+<%= @article.text %><br>
+</p>
+<% show_article_category(@article) %>
+<%= like_or_dislike_btn(@article) %>
+<p> <%= @article.likes.count %> likes 
+</p>
+<p>Views: <%= @article.hits %></p>
+<p>Written by:
+<%= @article.author.name %>
+</p>
+</div>
+<%= render 'homes/footer' %>

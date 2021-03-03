@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><img src="https://st2.depositphotos.com/3382541/8313/i/950/depositphotos_83131290-stock-photo-illustration-passenger-plane-aircraft.jpg" class="logo">Aviation</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto la">
+      <li class="nav-item">
+        <%= link_to 'Home', root_path, class:'nav-link' %>  
+      </li>
+      <li class="nav-item">
+      <%= link_to cat_name, category_path(1), class:'nav-link' %>
+        </li>
+		<li class="nav-item">
+        	<%= link_to second_name, category_path(2), class:'nav-link' %>
+      </li>
+           <li class="nav-item">
+        	<%= link_to third_name, category_path(3), class:'nav-link' %>
+      </li>
+        </li>
+           <li class="nav-item">
+        	<%= link_to fourth_name, category_path(4), class:'nav-link' %>
+      </li>
+
+    </ul>
+    <%= link_to "Create New Article",  new_article_path, class:'btn btn-light' %>
+    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:'btn btn-light' %>
+  </div>
+</nav>

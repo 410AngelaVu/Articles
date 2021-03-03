@@ -1,0 +1,16 @@
+<div class=" <%= image_first ? 'best' : 'disp_img_second' %>">
+		<div class="information">
+		<h4 class="category-name">
+		<%= @category.name %><br>
+		</h4>
+		<h5 class="category-name-1"><br>
+		<%= link_to f.title, f, class:'text-dark' %>
+		</h5>
+		<p class="cat-p">
+			<%= truncate(f.text, length: 250) %>
+		</p>
+	</div>
+	<div class="pictunare">
+		<%= image_tag(f.image_url, class:'img-category') if f.image_url %><br>
+	</div>
+	</div>

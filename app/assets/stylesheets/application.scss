@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap/scss/bootstrap';
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  height: 77px;
+  background-color: #4e443f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-a {
+  flex: 1;
+  font-size: 20px;
+  color: white;
+}
+
+.f-a:hover {
+  color: #fe6001;
+  text-decoration: none;
+}
+
+.dfa {
+  color: #fe6001;
+}
+
+.dfa:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.div-footer {
+  display: flex;
+  flex: 2;
+  margin-left: 10%;
+  margin-top: 1%;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2%;
+  margin-top: 1%;
+}
+
+.fa-twitter,
+.fa-instagram {
+  margin-top: -3%;
+  border-radius: 50%;
+  background-color: #fe6001;
+  padding-top: 11px;
+  width: 43px;
+  height: 35px;
+  padding-left: 12px;
+}
+
+.fa-facebook-f {
+  margin-top: -3%;
+  border-radius: 50%;
+  background-color: #fe6001;
+  padding-top: 11px;
+  width: 43px;
+  height: 35px;
+  padding-left: 15px;
+}
+
+.signup-form {
+  width: 25% !important;
+  margin-left: 40%;
+}
+
+.sign-up-h2 {
+  margin-left: 40%;
+}
